@@ -81,9 +81,9 @@
             this.dot42 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.yeniOyunBaşlatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hedef4NasılOynanırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startNewGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToPlayMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defineWhoPlaysFirstTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow)).BeginInit();
@@ -694,33 +694,34 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.yeniOyunBaşlatToolStripMenuItem,
-            this.hedef4NasılOynanırToolStripMenuItem,
-            this.çıkışToolStripMenuItem});
+            this.startNewGameToolStripMenuItem,
+            this.howToPlayMenuToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(661, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // yeniOyunBaşlatToolStripMenuItem
+            // startNewGameToolStripMenuItem
             // 
-            this.yeniOyunBaşlatToolStripMenuItem.Name = "yeniOyunBaşlatToolStripMenuItem";
-            this.yeniOyunBaşlatToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.yeniOyunBaşlatToolStripMenuItem.Text = "Yeni Oyun Başlat";
-            this.yeniOyunBaşlatToolStripMenuItem.Click += new System.EventHandler(this.yeniOyunBaşlatToolStripMenuItem_Click);
+            this.startNewGameToolStripMenuItem.Name = "startNewGameToolStripMenuItem";
+            this.startNewGameToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
+            this.startNewGameToolStripMenuItem.Text = "Yeni Oyun Başlat";
+            this.startNewGameToolStripMenuItem.Click += new System.EventHandler(this.yeniOyunBaşlatToolStripMenuItem_Click);
             // 
-            // hedef4NasılOynanırToolStripMenuItem
+            // howToPlayMenuToolStripMenuItem
             // 
-            this.hedef4NasılOynanırToolStripMenuItem.Name = "hedef4NasılOynanırToolStripMenuItem";
-            this.hedef4NasılOynanırToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
-            this.hedef4NasılOynanırToolStripMenuItem.Text = "Hedef 4 Nasıl Oynanır?";
+            this.howToPlayMenuToolStripMenuItem.Name = "howToPlayMenuToolStripMenuItem";
+            this.howToPlayMenuToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
+            this.howToPlayMenuToolStripMenuItem.Text = "Hedef 4 Nasıl Oynanır?";
             // 
-            // çıkışToolStripMenuItem
+            // exitToolStripMenuItem
             // 
-            this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.çıkışToolStripMenuItem.Text = "Çıkış";
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.exitToolStripMenuItem.Text = "Çıkış";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // defineWhoPlaysFirstTimer
             // 
@@ -898,9 +899,9 @@
         private System.Windows.Forms.PictureBox dot42;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem yeniOyunBaşlatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hedef4NasılOynanırToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startNewGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem howToPlayMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Timer defineWhoPlaysFirstTimer;
     }
 }
