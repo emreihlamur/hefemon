@@ -70,9 +70,13 @@ namespace hefemon
         void clearGameTable()
         {
             PictureBox[] dots = { dot1, dot2, dot3, dot4, dot5, dot6, dot7,dot8,dot9, dot10,dot11,dot12, dot13, dot14, dot15, dot16, dot17, dot18, dot19,
-                                    dot20, dot21, dot22, dot23, dot24, dot25, dot26, dot27, dot28, dot29, dot30, dot31, dot32, dot33, dot34, dot35, dot36, dot37, dot38, dot39, dot40, dot41, dot42};
+                                    dot20, dot21, dot22, dot23, dot24, dot25, dot26, dot27, dot28, dot29, dot30, dot31, dot32, dot33, dot34, dot35, dot36,
+                                    dot37, dot38, dot39, dot40, dot41, dot42};
+           
             for (int i = 0; i < 42; i++)
             {
+                int mode = i % 7;
+
                 dots[i].Image = whiteDot;
                 dots[i].Click += dotClicked;
             }
@@ -98,11 +102,15 @@ namespace hefemon
 
         } 
 
-        public void putMark(PictureBox clickedOne)
+        void putMark(PictureBox clickedOne)
         {
+            int index = Convert.ToInt32(clickedOne.Tag);
+            int row = index / 6;
+
             clickedOne.Image = currentPlayerDotColor;
             changeCurrentPlayer();
         }
+
 
 
         public Hefemon()

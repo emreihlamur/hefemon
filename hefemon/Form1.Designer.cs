@@ -169,6 +169,7 @@
             this.dot1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot1.TabIndex = 6;
             this.dot1.TabStop = false;
+            this.dot1.Tag = "1";
             // 
             // arrow
             // 
@@ -240,6 +241,7 @@
             this.dot2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot2.TabIndex = 6;
             this.dot2.TabStop = false;
+            this.dot2.Tag = "7";
             // 
             // dot3
             // 
@@ -251,6 +253,7 @@
             this.dot3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot3.TabIndex = 6;
             this.dot3.TabStop = false;
+            this.dot3.Tag = "13";
             // 
             // dot4
             // 
@@ -262,6 +265,7 @@
             this.dot4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot4.TabIndex = 6;
             this.dot4.TabStop = false;
+            this.dot4.Tag = "19";
             // 
             // dot5
             // 
@@ -273,6 +277,7 @@
             this.dot5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot5.TabIndex = 6;
             this.dot5.TabStop = false;
+            this.dot5.Tag = "25";
             // 
             // dot6
             // 
@@ -284,6 +289,7 @@
             this.dot6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot6.TabIndex = 6;
             this.dot6.TabStop = false;
+            this.dot6.Tag = "31";
             // 
             // dot7
             // 
@@ -295,6 +301,7 @@
             this.dot7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot7.TabIndex = 6;
             this.dot7.TabStop = false;
+            this.dot7.Tag = "37";
             // 
             // dot8
             // 
@@ -306,6 +313,7 @@
             this.dot8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot8.TabIndex = 6;
             this.dot8.TabStop = false;
+            this.dot8.Tag = "2";
             // 
             // dot9
             // 
@@ -317,6 +325,7 @@
             this.dot9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot9.TabIndex = 6;
             this.dot9.TabStop = false;
+            this.dot9.Tag = "8";
             // 
             // dot10
             // 
@@ -328,6 +337,7 @@
             this.dot10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot10.TabIndex = 6;
             this.dot10.TabStop = false;
+            this.dot10.Tag = "14";
             // 
             // dot11
             // 
@@ -339,6 +349,7 @@
             this.dot11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot11.TabIndex = 6;
             this.dot11.TabStop = false;
+            this.dot11.Tag = "20";
             // 
             // dot12
             // 
@@ -350,6 +361,7 @@
             this.dot12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot12.TabIndex = 6;
             this.dot12.TabStop = false;
+            this.dot12.Tag = "26";
             // 
             // dot13
             // 
@@ -361,18 +373,20 @@
             this.dot13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot13.TabIndex = 6;
             this.dot13.TabStop = false;
+            this.dot13.Tag = "32";
             this.dot13.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // dot14
             // 
             this.dot14.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.dot14.Image = global::hefemon.Properties.Resources.white;
+            this.dot14.Image = global::hefemon.Properties.Resources.blue;
             this.dot14.Location = new System.Drawing.Point(469, 365);
             this.dot14.Name = "dot14";
             this.dot14.Size = new System.Drawing.Size(50, 50);
             this.dot14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot14.TabIndex = 6;
             this.dot14.TabStop = false;
+            this.dot14.Tag = "38";
             // 
             // dot15
             // 
@@ -384,6 +398,7 @@
             this.dot15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot15.TabIndex = 6;
             this.dot15.TabStop = false;
+            this.dot15.Tag = "3";
             // 
             // dot16
             // 
@@ -395,6 +410,7 @@
             this.dot16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot16.TabIndex = 6;
             this.dot16.TabStop = false;
+            this.dot16.Tag = "9";
             // 
             // dot17
             // 
@@ -406,6 +422,7 @@
             this.dot17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot17.TabIndex = 6;
             this.dot17.TabStop = false;
+            this.dot17.Tag = "15";
             // 
             // dot18
             // 
@@ -417,6 +434,7 @@
             this.dot18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot18.TabIndex = 6;
             this.dot18.TabStop = false;
+            this.dot18.Tag = "21";
             // 
             // dot19
             // 
@@ -428,6 +446,7 @@
             this.dot19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot19.TabIndex = 6;
             this.dot19.TabStop = false;
+            this.dot19.Tag = "27";
             // 
             // dot20
             // 
@@ -439,17 +458,19 @@
             this.dot20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot20.TabIndex = 6;
             this.dot20.TabStop = false;
+            this.dot20.Tag = "33";
             // 
             // dot21
             // 
             this.dot21.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.dot21.Image = global::hefemon.Properties.Resources.white;
+            this.dot21.Image = global::hefemon.Properties.Resources.red;
             this.dot21.Location = new System.Drawing.Point(469, 309);
             this.dot21.Name = "dot21";
             this.dot21.Size = new System.Drawing.Size(50, 50);
             this.dot21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot21.TabIndex = 6;
             this.dot21.TabStop = false;
+            this.dot21.Tag = "39";
             // 
             // dot22
             // 
@@ -461,6 +482,7 @@
             this.dot22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot22.TabIndex = 6;
             this.dot22.TabStop = false;
+            this.dot22.Tag = "4";
             // 
             // dot23
             // 
@@ -472,6 +494,7 @@
             this.dot23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot23.TabIndex = 6;
             this.dot23.TabStop = false;
+            this.dot23.Tag = "10";
             // 
             // dot24
             // 
@@ -483,6 +506,7 @@
             this.dot24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot24.TabIndex = 6;
             this.dot24.TabStop = false;
+            this.dot24.Tag = "16";
             // 
             // dot25
             // 
@@ -494,6 +518,7 @@
             this.dot25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot25.TabIndex = 6;
             this.dot25.TabStop = false;
+            this.dot25.Tag = "22";
             // 
             // dot26
             // 
@@ -505,6 +530,7 @@
             this.dot26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot26.TabIndex = 6;
             this.dot26.TabStop = false;
+            this.dot26.Tag = "28";
             // 
             // dot27
             // 
@@ -516,6 +542,7 @@
             this.dot27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot27.TabIndex = 6;
             this.dot27.TabStop = false;
+            this.dot27.Tag = "34";
             // 
             // dot28
             // 
@@ -527,6 +554,7 @@
             this.dot28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot28.TabIndex = 6;
             this.dot28.TabStop = false;
+            this.dot28.Tag = "40";
             // 
             // dot29
             // 
@@ -538,6 +566,7 @@
             this.dot29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot29.TabIndex = 6;
             this.dot29.TabStop = false;
+            this.dot29.Tag = "5";
             // 
             // dot30
             // 
@@ -549,6 +578,7 @@
             this.dot30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot30.TabIndex = 6;
             this.dot30.TabStop = false;
+            this.dot30.Tag = "11";
             // 
             // dot31
             // 
@@ -560,6 +590,7 @@
             this.dot31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot31.TabIndex = 6;
             this.dot31.TabStop = false;
+            this.dot31.Tag = "17";
             // 
             // dot32
             // 
@@ -571,6 +602,7 @@
             this.dot32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot32.TabIndex = 6;
             this.dot32.TabStop = false;
+            this.dot32.Tag = "23";
             // 
             // dot33
             // 
@@ -582,6 +614,7 @@
             this.dot33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot33.TabIndex = 6;
             this.dot33.TabStop = false;
+            this.dot33.Tag = "29";
             // 
             // dot34
             // 
@@ -593,6 +626,7 @@
             this.dot34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot34.TabIndex = 6;
             this.dot34.TabStop = false;
+            this.dot34.Tag = "35";
             // 
             // dot35
             // 
@@ -604,6 +638,7 @@
             this.dot35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot35.TabIndex = 6;
             this.dot35.TabStop = false;
+            this.dot35.Tag = "41";
             // 
             // dot36
             // 
@@ -615,6 +650,7 @@
             this.dot36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot36.TabIndex = 6;
             this.dot36.TabStop = false;
+            this.dot36.Tag = "6";
             // 
             // dot37
             // 
@@ -626,6 +662,7 @@
             this.dot37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot37.TabIndex = 6;
             this.dot37.TabStop = false;
+            this.dot37.Tag = "12";
             // 
             // dot38
             // 
@@ -637,6 +674,7 @@
             this.dot38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot38.TabIndex = 6;
             this.dot38.TabStop = false;
+            this.dot38.Tag = "18";
             // 
             // dot39
             // 
@@ -648,6 +686,7 @@
             this.dot39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot39.TabIndex = 6;
             this.dot39.TabStop = false;
+            this.dot39.Tag = "24";
             // 
             // dot40
             // 
@@ -659,6 +698,7 @@
             this.dot40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot40.TabIndex = 6;
             this.dot40.TabStop = false;
+            this.dot40.Tag = "30";
             // 
             // dot41
             // 
@@ -670,6 +710,7 @@
             this.dot41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot41.TabIndex = 6;
             this.dot41.TabStop = false;
+            this.dot41.Tag = "36";
             // 
             // dot42
             // 
@@ -681,6 +722,7 @@
             this.dot42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dot42.TabIndex = 6;
             this.dot42.TabStop = false;
+            this.dot42.Tag = "42";
             // 
             // pictureBox3
             // 
@@ -732,7 +774,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(661, 666);
+            this.ClientSize = new System.Drawing.Size(661, 652);
             this.Controls.Add(this.dot42);
             this.Controls.Add(this.dot41);
             this.Controls.Add(this.dot35);
@@ -785,6 +827,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Hefemon";
             this.Text = "Hefemon - Hedef 4 Oyunu";
