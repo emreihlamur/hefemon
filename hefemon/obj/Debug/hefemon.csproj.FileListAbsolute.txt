@@ -1,1 +1,10 @@
 C:\Users\Ihlamur\Desktop\hefemon\hefemon\hefemon\bin\Debug\hefemon.exe.config
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\bin\Debug\hefemon.exe.config
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\bin\Debug\hefemon.exe
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\bin\Debug\hefemon.pdb
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\obj\Debug\hefemon.csprojResolveAssemblyReference.cache
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\obj\Debug\hefemon.Properties.Resources.resources
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\obj\Debug\hefemon.csproj.GenerateResource.Cache
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\obj\Debug\hefemon.exe
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\obj\Debug\hefemon.pdb
+C:\Users\Ihlamur\Desktop\hefemon\hefemon\obj\Debug\hefemon.Hefemon.resources
