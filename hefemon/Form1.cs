@@ -13,48 +13,56 @@ namespace hefemon
     public partial class Hefemon : Form
     {
         int timerTickForSeconds = -1;
-        int currentPlayer = -1;
-        Image currentPlayerDotColor;
+        Player player = Player.Blue;
 
-        private void dotClicked(object sender, EventArgs e)
-        { 
-            PictureBox clickedOne = sender as PictureBox;
-            putMark(clickedOne);
-            changeCurrentPlayer();
-        } 
+        Image currentPlayerDotColor;
+        Image whiteDot = hefemon.Properties.Resources.white;
+        Image redDot = hefemon.Properties.Resources.red;
+        Image blueDot = hefemon.Properties.Resources.blue;
+
+        Image leftArrow = hefemon.Properties.Resources.arrow_left;
+        Image rightArrow = hefemon.Properties.Resources.arrow_right;
+
+        enum Player
+        {
+            Red,
+            Blue
+        }
 
         void defineWhoPlaysFirst()
         {
             Random random = new Random();
-            currentPlayer = random.Next(2);
-            
-            if (currentPlayer == 0)
+            int randomNumber = random.Next(2);
+
+            if (randomNumber == 0)
             {
                 timerTickForSeconds = 13;
-                arrow.Image = hefemon.Properties.Resources.arrow_left;
-                currentPlayerDotColor = hefemon.Properties.Resources.red;
+                player = Player.Red;
+                arrow.Image = leftArrow;
+                currentPlayerDotColor = redDot;
 
             } else {
                 timerTickForSeconds = 12;
-                arrow.Image = hefemon.Properties.Resources.arrow_right;
-                currentPlayerDotColor = hefemon.Properties.Resources.blue;
+                player = Player.Blue;
+                arrow.Image = rightArrow;
+                currentPlayerDotColor = blueDot;
             }
 
         }
 
         void changeCurrentPlayer()
         {
-            if (currentPlayer == 0)
+            if (player == Player.Red)
             {
-                currentPlayer = 1;
-                currentPlayerDotColor = hefemon.Properties.Resources.blue;
-                arrow.Image = hefemon.Properties.Resources.arrow_right;
+                player = Player.Blue;
+                currentPlayerDotColor = blueDot;
+                arrow.Image = rightArrow;
             }
             else
             {
-                currentPlayer = 0;
-                currentPlayerDotColor = hefemon.Properties.Resources.red;
-                arrow.Image = hefemon.Properties.Resources.arrow_left;
+                player = Player.Red;
+                currentPlayerDotColor = redDot;
+                arrow.Image = leftArrow;
             }
 
         }
@@ -65,15 +73,10 @@ namespace hefemon
                                     dot20, dot21, dot22, dot23, dot24, dot25, dot26, dot27, dot28, dot29, dot30, dot31, dot32, dot33, dot34, dot35, dot36, dot37, dot38, dot39, dot40, dot41, dot42};
             for (int i = 0; i < 42; i++)
             {
-                dots[i].Image = hefemon.Properties.Resources.white;
+                dots[i].Image = whiteDot;
                 dots[i].Click += dotClicked;
             }
 
-        }
-
-        public void putMark(PictureBox clickedOne)
-        {
-            clickedOne.Image = currentPlayerDotColor;
         }
 
         void startGame()
@@ -83,6 +86,24 @@ namespace hefemon
             defineWhoPlaysFirstTimer.Interval = 100;
             defineWhoPlaysFirstTimer.Start();
         }
+
+        private void dotClicked(object sender, EventArgs e)
+        {
+            PictureBox clickedOne = sender as PictureBox;
+
+            if (clickedOne.Image == whiteDot)
+            {
+                putMark(clickedOne);
+            }
+
+        } 
+
+        public void putMark(PictureBox clickedOne)
+        {
+            clickedOne.Image = currentPlayerDotColor;
+            changeCurrentPlayer();
+        }
+
 
         public Hefemon()
         {
@@ -117,27 +138,25 @@ namespace hefemon
             if (timerTickForSeconds != 0)
             {
                 if (timerTickForSeconds % 2 == 0) {
-                    arrow.Image = hefemon.Properties.Resources.arrow_left;
+                    arrow.Image = leftArrow;
                 }
                 else
                 {
-                    arrow.Image = hefemon.Properties.Resources.arrow_right;
+                    arrow.Image = rightArrow;
                 }
             }
             else
             {
-                if (currentPlayer == 0)
+                if (player == Player.Red)
                 {
-                    arrow.Image = hefemon.Properties.Resources.arrow_left;
+                    arrow.Image = leftArrow;
                 }
                 else
                 {
-                    arrow.Image = hefemon.Properties.Resources.arrow_right;
+                    arrow.Image = rightArrow;
                 }
                 defineWhoPlaysFirstTimer.Stop();
             }
-
-           
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
