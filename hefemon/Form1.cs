@@ -116,23 +116,105 @@ namespace hefemon
                             };
 
             bool hasFoundPlaceToPut = false;
-            int tryIndex = 0;
-            int row = Convert.ToInt32(clickedOne.Tag);
-            int puttedIndex = 0;
+            int row = 0;
+            int col = Convert.ToInt32(clickedOne.Tag);
 
             while (!hasFoundPlaceToPut)
             {
-                if (dots[row, tryIndex].Image == whiteDot) {
-                    dots[row, tryIndex].Image = currentPlayerDotColor;
+                if (dots[col, row].Image == whiteDot)
+                {
+                    dots[col, row].Image = currentPlayerDotColor;
                     hasFoundPlaceToPut = true;
-                    puttedIndex = tryIndex;
-                    changeCurrentPlayer();
+
+                    bool hasAWinner = checkWinStatus(dots);
+
+                    if (!hasAWinner)
+                    {
+                        changeCurrentPlayer();
+                    }
+                    else
+                    {
+                        endGame(player);
+                    }
+
                 }
                 else
                 {
-                    tryIndex++;
+                    row++;
                 }
             }
+        }
+
+        bool checkWinStatus (PictureBox[,] dots) {
+
+            for (int row = 0; row < 7; row++)
+            {
+                for (int col = 0; col < 6; col++)
+                {
+                    try
+                    {
+
+                        if (
+                        ((dots[col, row].Image == dots[col + 1, row].Image
+                        &&
+                        dots[col + 1, row].Image == dots[col + 2, row].Image
+                        &&
+                        dots[col + 2, row].Image == dots[col + 3, row].Image)
+
+                        ||
+
+                        (dots[col, row].Image == dots[col, row + 1].Image
+                        &&
+                        dots[col, row + 1].Image == dots[col, row + 2].Image
+                        &&
+                        dots[col, row + 2].Image == dots[col, row + 3].Image)
+
+                        ||
+
+                        (dots[col, row].Image == dots[col + 1, row + 1].Image
+                        &&
+                        dots[col + 1, row + 1].Image == dots[col + 2, row + 2].Image
+                        &&
+                        dots[col + 2, row + 2].Image == dots[col + 3, row + 3].Image)
+
+                        ||
+
+                        (dots[col, row].Image == dots[col - 1, row - 1].Image
+                        &&
+                        dots[col - 1, row - 1].Image == dots[col - 2, row - 2].Image
+                        &&
+                        dots[col - 2, row - 2].Image == dots[col - 3, row - 3].Image)) 
+                        
+                        && 
+                        dots[col, row].Image != whiteDot)
+                        {
+
+                            if (player == Player.Red)
+                            {
+                                MessageBox.Show("kırmızı kazandı");
+                                return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Mavi kazandı");
+                                return true;
+                            }
+
+                        }
+                    }
+                    catch
+                    {
+                        //out of bounds
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        void endGame(Player player)
+        {
+            Console.WriteLine(player.ToString() + "wins");
         }
 
         public Hefemon()
