@@ -97,21 +97,43 @@ namespace hefemon
 
             if (clickedOne.Image == whiteDot)
             {
-                putMark(clickedOne);
+                putDot(clickedOne);
             }
 
         } 
 
-        void putMark(PictureBox clickedOne)
+        void putDot(PictureBox clickedOne)
         {
-            int index = Convert.ToInt32(clickedOne.Tag);
-            int row = index / 6;
+            
+            PictureBox[,] dots = new PictureBox[7, 6]{
+                                { dot1, dot8, dot15, dot22, dot29, dot36 },
+                                { dot2, dot9, dot16, dot23, dot30, dot37 },
+                                { dot3, dot10, dot17, dot24, dot31, dot38 },
+                                { dot4, dot11, dot18, dot25, dot32, dot39 },
+                                { dot5, dot12, dot19, dot26, dot33, dot40 },
+                                { dot6, dot13, dot20, dot27, dot34, dot41 },
+                                { dot7, dot14, dot21, dot28, dot35, dot42 }
+                            };
 
-            clickedOne.Image = currentPlayerDotColor;
-            changeCurrentPlayer();
+            bool hasFoundPlaceToPut = false;
+            int tryIndex = 0;
+            int row = Convert.ToInt32(clickedOne.Tag);
+            int puttedIndex = 0;
+
+            while (!hasFoundPlaceToPut)
+            {
+                if (dots[row, tryIndex].Image == whiteDot) {
+                    dots[row, tryIndex].Image = currentPlayerDotColor;
+                    hasFoundPlaceToPut = true;
+                    puttedIndex = tryIndex;
+                    changeCurrentPlayer();
+                }
+                else
+                {
+                    tryIndex++;
+                }
+            }
         }
-
-
 
         public Hefemon()
         {
