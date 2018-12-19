@@ -52,19 +52,28 @@ namespace hefemon
 
         void changeCurrentPlayer()
         {
-            if (player == Player.Red)
+
+            if (!isBoardFull())
             {
-                player = Player.Blue;
-                currentPlayerDotColor = blueDot;
-                arrow.Image = rightArrow;
+                if (player == Player.Red)
+                {
+                    player = Player.Blue;
+                    currentPlayerDotColor = blueDot;
+                    arrow.Image = rightArrow;
+                }
+                else
+                {
+                    player = Player.Red;
+                    currentPlayerDotColor = redDot;
+                    arrow.Image = leftArrow;
+                }
             }
             else
             {
-                player = Player.Red;
-                currentPlayerDotColor = redDot;
-                arrow.Image = leftArrow;
+                label3.Text = "Oyun Berabere Bitti";
+                label3.Visible = true;
             }
-
+            
         }
 
         void clearGameTable()
@@ -86,6 +95,7 @@ namespace hefemon
         void startGame()
         {
             clearGameTable();
+            label3.Visible = false;
             defineWhoPlaysFirst();
             defineWhoPlaysFirstTimer.Interval = 100;
             defineWhoPlaysFirstTimer.Start();
@@ -104,7 +114,7 @@ namespace hefemon
 
         void putDot(PictureBox clickedOne)
         {
-            
+
             PictureBox[,] dots = new PictureBox[7, 6]{
                                 { dot1, dot8, dot15, dot22, dot29, dot36 },
                                 { dot2, dot9, dot16, dot23, dot30, dot37 },
@@ -114,7 +124,7 @@ namespace hefemon
                                 { dot6, dot13, dot20, dot27, dot34, dot41 },
                                 { dot7, dot14, dot21, dot28, dot35, dot42 }
                             };
-
+            
             bool hasFoundPlaceToPut = false;
             int row = 0;
             int col = Convert.ToInt32(clickedOne.Tag);
@@ -143,6 +153,26 @@ namespace hefemon
                     row++;
                 }
             }
+            
+        }
+
+        bool isBoardFull()
+        {
+
+            PictureBox[] dots = { dot1, dot2, dot3, dot4, dot5, dot6, dot7,dot8,dot9, dot10,dot11,dot12, dot13, dot14, dot15, dot16, dot17, dot18, dot19,
+                                    dot20, dot21, dot22, dot23, dot24, dot25, dot26, dot27, dot28, dot29, dot30, dot31, dot32, dot33, dot34, dot35, dot36,
+                                    dot37, dot38, dot39, dot40, dot41, dot42};
+
+            for (int i = 0; i < 42; i++)
+            {
+                if (dots[i].Image == whiteDot)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+            
         }
 
         bool checkWinStatus (PictureBox[,] dots) {
@@ -191,12 +221,10 @@ namespace hefemon
 
                             if (player == Player.Red)
                             {
-                                MessageBox.Show("kırmızı kazandı");
                                 return true;
                             }
                             else
                             {
-                                MessageBox.Show("Mavi kazandı");
                                 return true;
                             }
 
@@ -214,7 +242,16 @@ namespace hefemon
 
         void endGame(Player player)
         {
-            Console.WriteLine(player.ToString() + "wins");
+            if (player == Player.Red)
+            {
+                label3.Text = "Kırmızı Oyuncu Kazandı";
+            }
+            else
+            {
+                label3.Text = "Mavi Oyuncu Kazandı";
+            }
+            
+            label3.Visible = true;
         }
 
         public Hefemon()
