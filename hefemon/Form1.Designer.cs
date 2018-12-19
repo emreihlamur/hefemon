@@ -758,6 +758,7 @@
             this.howToPlayMenuToolStripMenuItem.Name = "howToPlayMenuToolStripMenuItem";
             this.howToPlayMenuToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
             this.howToPlayMenuToolStripMenuItem.Text = "Hedef 4 Nasıl Oynanır?";
+            this.howToPlayMenuToolStripMenuItem.Click += new System.EventHandler(this.howToPlayMenuToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 

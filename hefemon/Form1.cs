@@ -277,7 +277,9 @@ namespace hefemon
 
         private void yeniOyunBaşlatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            startGame();
+            this.Hide();
+            Hefemon gameTable = new Hefemon();
+            gameTable.ShowDialog();
         }
 
         private void defineWhoPlaysFirstTimer_Tick(object sender, EventArgs e)
@@ -311,6 +313,11 @@ namespace hefemon
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void howToPlayMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("En sık kullanılan 6 satır ve 7 sütundan oluşan 6x7 oyun tahtasıdır. \n \nBu tahta, oyun disklerinin üst üste sıralanabileceği özel bir oyun tahtasıdır. Oyun iki farklı renklerden oluşan disklerle oynanmaktadır. \n \nOyun içinde ilk dörtlemeyi yapan taraf oyunu kazanmış olur. Dörtleme oyunu değişik bir oyun olup, oynaması oldukça zevk verir. Basit gibi gözüken bu oyun kişilerin farklı şekillerde düşünmesini sağlamaktadır. Oyun tahtası üzerinde atılan diskler özellikle çocuklar için eğlenceli gelir. \n\nOnlar eğlenirken fark etmeden algıları da üç boyutlu şekilde dörtleme oyunu sayesinde gelişecektir.");
         }
     }
 }
