@@ -209,6 +209,14 @@ namespace hefemon
 
                         ||
 
+                        (dots[col, row].Image == dots[col + 1, row - 1].Image
+                        &&
+                        dots[col + 1, row - 1].Image == dots[col + 2, row - 2].Image
+                        &&
+                        dots[col + 2, row - 2].Image == dots[col + 3, row - 3].Image)
+
+                        ||
+
                         (dots[col, row].Image == dots[col - 1, row - 1].Image
                         &&
                         dots[col - 1, row - 1].Image == dots[col - 2, row - 2].Image
